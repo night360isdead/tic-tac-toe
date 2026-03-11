@@ -6,13 +6,13 @@ extends Control
 
 
 #shows the current player. also the starting point of the game
-var current_player = "X"
+var current_player = "O"
 
 
 #the player and the ai symbol
 
-var human_player = "X"
-var ai_player = "O"
+var human_player = "O"
+var ai_player = "X"
 
 
 
@@ -24,12 +24,12 @@ var winner = ""
 #this is the state of the board which stores the game state meaning where is O and where is X
 var board_state = [
 	["","",""],
-	["","",""],
+	["","X",""],
 	["","",""],
 ]
 
 #this is for determining the draw time
-var moves: int = 0
+var moves: int = 1
 
 
 
@@ -54,11 +54,11 @@ func _ready() -> void:
 		button.mouse_entered.connect(_on_button_hover)
 
 
+
 ##################################################################33333
 
 func _on_button_hover():
 	UiSoundManager.play_hover()
-
 #############################################################################################
 # main game loop
 
@@ -92,6 +92,11 @@ func _on_button_pressed(button) -> void:
 		if winner != "":
 			return
 		switch_player()
+		
+		
+		
+		#prints the variable assigned in the win functions
+		print(winner)
 ###############################################################################################3
 
 
@@ -124,6 +129,7 @@ func stop1():
 #this checks for the winner
 func check_winner():
 	
+	
 	row_win()
 	col_win()
 	diag_win()
@@ -142,7 +148,7 @@ func check_winner():
 func row_win():
 	for i in range(3):
 		if board_state[i][0] != "" and board_state[i][0] == board_state[i][1] and board_state[i][1] == board_state[i][2]:
-			label_2.text = String(board_state[i][0]) + " wins in rows"
+			label_2.text= String(board_state[i][0]) + " wins in rows"
 			#the variable for who won the round
 			winner = board_state[i][0]
 			stop()
@@ -171,7 +177,7 @@ func diag_win():
 		stop()
 		
 	if board_state[0][2] != "" and board_state[0][2] == board_state[1][1] and board_state[1][1] == board_state[2][0]:
-		label_2.text = board_state[0][2] + " wins in diagonals"
+		label_2.text = board_state[0][2] + " wins in other diagonals"
 		#the variable for who won the round
 		winner = board_state[0][2]
 		stop()
@@ -196,27 +202,23 @@ func stop():
 
 
 
-# ui control
+#one ui control
 func _input(_event: InputEvent) -> void:
 	if Input.is_action_just_pressed("restart"):
 		UiSoundManager.play_select()
 		get_tree().reload_current_scene()
-	
 	if Input.is_action_just_pressed("escape"):
 		UiSoundManager.play_select()
 		get_tree().change_scene_to_file("res://scene/menu.tscn")
-	
-	
 
+#change the scene to game 2
 
-#change scene to game 2
-
-func _on_oswitch_pressed() -> void:
+func _on_xswitch_pressed() -> void:
 	UiSoundManager.play_select()
-	get_tree().change_scene_to_file("res://scene/game_2.tscn")
+	get_tree().change_scene_to_file("res://scene/game_1.tscn")
 
 
-#desplay text
+
 
 
 
@@ -311,7 +313,3 @@ func minimax (is_maximizing):
 					board_state[i][j] = ""
 					best_score = min(score,best_score)
 		return best_score
-
-	
-	
-	

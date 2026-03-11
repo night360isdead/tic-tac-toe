@@ -1,0 +1,139 @@
+[gd_scene load_steps=11 format=3 uid="uid://ddfr8y8c2c80s"]
+
+[ext_resource type="Script" uid="uid://dlv2wde2un232" path="res://scripts/credits.gd" id="1_55r6w"]
+[ext_resource type="Texture2D" uid="uid://b5vg8gv7ys33i" path="res://assets/background images/wallhaven-nmk710.jpg" id="1_s4ovi"]
+[ext_resource type="FontFile" uid="uid://qm6warlcq1iy" path="res://assets/text_font/BebasNeue-Regular.ttf" id="2_55r6w"]
+[ext_resource type="FontFile" uid="uid://btcoc2uckq2n2" path="res://assets/text_font/ComicRelief-Bold.ttf" id="3_i66u5"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tphso"]
+texture = ExtResource("1_s4ovi")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tj3xu"]
+bg_color = Color(1, 0.50980395, 0, 1)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_size = 4
+shadow_offset = Vector2(0, 4)
+anti_aliasing_size = 10.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q68h7"]
+bg_color = Color(0.5137255, 0.13333334, 0, 1)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0, 0, 0, 1)
+border_blend = true
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_size = 4
+shadow_offset = Vector2(0, 4)
+anti_aliasing_size = 10.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mjmje"]
+bg_color = Color(0.6901961, 0.40392157, 0, 1)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0, 0, 0, 1)
+border_blend = true
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_size = 4
+shadow_offset = Vector2(0, 4)
+anti_aliasing_size = 10.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xeho1"]
+bg_color = Color(1, 0.17254902, 0, 0.7411765)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0, 0, 0, 1)
+border_blend = true
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_size = 4
+shadow_offset = Vector2(0, 4)
+anti_aliasing_size = 10.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nq74t"]
+
+[node name="credits" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_55r6w")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_tphso")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -56.0
+offset_top = -21.5
+offset_right = 56.0
+offset_bottom = 21.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_55r6w")
+theme_override_font_sizes/font_size = 100
+text = "Made by
+Mehrab Hasan Sowad"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -108.0
+offset_top = -84.0
+grow_horizontal = 0
+grow_vertical = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 32
+theme_override_fonts/font = ExtResource("3_i66u5")
+theme_override_font_sizes/font_size = 48
+theme_override_styles/normal = SubResource("StyleBoxFlat_tj3xu")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_q68h7")
+theme_override_styles/hover = SubResource("StyleBoxFlat_mjmje")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_xeho1")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_nq74t")
+text = "back to menu"
+
+[connection signal="pressed" from="button" to="." method="_on_button_pressed"]

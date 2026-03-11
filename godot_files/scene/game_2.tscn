@@ -1,11 +1,11 @@
-[gd_scene load_steps=21 format=3 uid="uid://ctn0h4geln8c0"]
+[gd_scene load_steps=21 format=3 uid="uid://ityjdje7nuoy"]
 
-[ext_resource type="Script" uid="uid://c7xvse53c47c" path="res://scripts/game.gd" id="1_jl2ff"]
-[ext_resource type="FontFile" uid="uid://btcoc2uckq2n2" path="res://assets/text_font/ComicRelief-Bold.ttf" id="2_jl2ff"]
-[ext_resource type="Texture2D" uid="uid://du7aw77grh2ef" path="res://assets/background images/wallhaven-49r1kw.jpg" id="2_n7pgs"]
+[ext_resource type="Script" uid="uid://dgg7gjatdlf0g" path="res://scripts/another_game.gd" id="1_ph4g5"]
+[ext_resource type="Texture2D" uid="uid://du7aw77grh2ef" path="res://assets/background images/wallhaven-49r1kw.jpg" id="2_cdpft"]
+[ext_resource type="FontFile" uid="uid://btcoc2uckq2n2" path="res://assets/text_font/ComicRelief-Bold.ttf" id="2_plp6h"]
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5l48x"]
-texture = ExtResource("2_n7pgs")
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3pkme"]
+texture = ExtResource("2_cdpft")
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n7pgs"]
 bg_color = Color(0.36078432, 0.3764706, 1, 1)
@@ -657,7 +657,7 @@ anti_aliasing_size = 10.0
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dbls1"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b7t8k"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ph4g5"]
 bg_color = Color(1, 1, 0, 1)
 border_width_left = 8
 border_width_top = 8
@@ -673,7 +673,7 @@ shadow_size = 4
 shadow_offset = Vector2(0, 4)
 anti_aliasing_size = 10.0
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w66fs"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_plp6h"]
 bg_color = Color(0.6745098, 0.6313726, 0, 1)
 border_width_left = 8
 border_width_top = 8
@@ -689,7 +689,7 @@ shadow_size = 4
 shadow_offset = Vector2(0, 4)
 anti_aliasing_size = 10.0
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n7n05"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cdpft"]
 bg_color = Color(0.49803922, 1, 0, 1)
 border_width_left = 8
 border_width_top = 8
@@ -705,7 +705,7 @@ shadow_size = 4
 shadow_offset = Vector2(0, 4)
 anti_aliasing_size = 10.0
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q74px"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3pkme"]
 bg_color = Color(1, 0.17254902, 0, 0.7411765)
 border_width_left = 8
 border_width_top = 8
@@ -721,7 +721,7 @@ shadow_size = 4
 shadow_offset = Vector2(0, 4)
 anti_aliasing_size = 10.0
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2hjt7"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_oiadk"]
 
 [node name="game" type="Control"]
 layout_mode = 3
@@ -730,7 +730,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_jl2ff")
+script = ExtResource("1_ph4g5")
 
 [node name="background" type="Panel" parent="."]
 layout_mode = 1
@@ -739,7 +739,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_5l48x")
+theme_override_styles/panel = SubResource("StyleBoxTexture_3pkme")
 
 [node name="foreground" type="Panel" parent="."]
 layout_mode = 1
@@ -795,9 +795,9 @@ theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/shadow_offset_y = 8
 theme_override_constants/outline_size = 16
 theme_override_constants/shadow_outline_size = 16
-theme_override_fonts/font = ExtResource("2_jl2ff")
+theme_override_fonts/font = ExtResource("2_plp6h")
 theme_override_font_sizes/font_size = 64
-text = "Player goes first"
+text = "Computer goes first"
 
 [node name="Label2" type="Label" parent="texts"]
 anchors_preset = -1
@@ -815,7 +815,7 @@ theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/shadow_offset_y = 8
 theme_override_constants/outline_size = 16
 theme_override_constants/shadow_outline_size = 16
-theme_override_fonts/font = ExtResource("2_jl2ff")
+theme_override_fonts/font = ExtResource("2_plp6h")
 theme_override_font_sizes/font_size = 64
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -827,9 +827,9 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 356.0
-offset_top = 267.0
-offset_right = 721.0
+offset_left = 330.0
+offset_top = 309.0
+offset_right = 695.0
 offset_bottom = 360.0
 grow_horizontal = 0
 grow_vertical = 0
@@ -838,12 +838,9 @@ theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/shadow_offset_y = 8
 theme_override_constants/outline_size = 16
 theme_override_constants/shadow_outline_size = 16
-theme_override_fonts/font = ExtResource("2_jl2ff")
+theme_override_fonts/font = ExtResource("2_plp6h")
 theme_override_font_sizes/font_size = 32
-text = "press space to restart
-press esc to quit"
-horizontal_alignment = 1
-vertical_alignment = 1
+text = "press space to restart"
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
@@ -870,7 +867,7 @@ size_flags_vertical = 3
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 32
-theme_override_fonts/font = ExtResource("2_jl2ff")
+theme_override_fonts/font = ExtResource("2_plp6h")
 theme_override_font_sizes/font_size = 100
 theme_override_styles/normal = SubResource("StyleBoxFlat_5kiuu")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_33cqm")
@@ -885,7 +882,7 @@ size_flags_vertical = 3
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 32
-theme_override_fonts/font = ExtResource("2_jl2ff")
+theme_override_fonts/font = ExtResource("2_plp6h")
 theme_override_font_sizes/font_size = 100
 theme_override_styles/normal = SubResource("StyleBoxFlat_5kiuu")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_33cqm")
@@ -900,7 +897,7 @@ size_flags_vertical = 3
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 32
-theme_override_fonts/font = ExtResource("2_jl2ff")
+theme_override_fonts/font = ExtResource("2_plp6h")
 theme_override_font_sizes/font_size = 100
 theme_override_styles/normal = SubResource("StyleBoxFlat_5kiuu")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_33cqm")
@@ -919,7 +916,7 @@ size_flags_vertical = 3
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 32
-theme_override_fonts/font = ExtResource("2_jl2ff")
+theme_override_fonts/font = ExtResource("2_plp6h")
 theme_override_font_sizes/font_size = 100
 theme_override_styles/normal = SubResource("StyleBoxFlat_5kiuu")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_33cqm")
@@ -934,13 +931,14 @@ size_flags_vertical = 3
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 32
-theme_override_fonts/font = ExtResource("2_jl2ff")
+theme_override_fonts/font = ExtResource("2_plp6h")
 theme_override_font_sizes/font_size = 100
 theme_override_styles/normal = SubResource("StyleBoxFlat_5kiuu")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_33cqm")
 theme_override_styles/hover = SubResource("StyleBoxFlat_xwcet")
 theme_override_styles/disabled = SubResource("StyleBoxFlat_jl2ff")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_dbls1")
+text = "X"
 
 [node name="Button_1_2" type="Button" parent="VBoxContainer/HBoxContainer2" groups=["grid_buttons"]]
 layout_mode = 2
@@ -949,7 +947,7 @@ size_flags_vertical = 3
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 32
-theme_override_fonts/font = ExtResource("2_jl2ff")
+theme_override_fonts/font = ExtResource("2_plp6h")
 theme_override_font_sizes/font_size = 100
 theme_override_styles/normal = SubResource("StyleBoxFlat_5kiuu")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_33cqm")
@@ -968,7 +966,7 @@ size_flags_vertical = 3
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 32
-theme_override_fonts/font = ExtResource("2_jl2ff")
+theme_override_fonts/font = ExtResource("2_plp6h")
 theme_override_font_sizes/font_size = 100
 theme_override_styles/normal = SubResource("StyleBoxFlat_5kiuu")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_33cqm")
@@ -983,7 +981,7 @@ size_flags_vertical = 3
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 32
-theme_override_fonts/font = ExtResource("2_jl2ff")
+theme_override_fonts/font = ExtResource("2_plp6h")
 theme_override_font_sizes/font_size = 100
 theme_override_styles/normal = SubResource("StyleBoxFlat_5kiuu")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_33cqm")
@@ -998,7 +996,7 @@ size_flags_vertical = 3
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 32
-theme_override_fonts/font = ExtResource("2_jl2ff")
+theme_override_fonts/font = ExtResource("2_plp6h")
 theme_override_font_sizes/font_size = 100
 theme_override_styles/normal = SubResource("StyleBoxFlat_5kiuu")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_33cqm")
@@ -1025,14 +1023,13 @@ size_flags_vertical = 3
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 32
-theme_override_fonts/font = ExtResource("2_jl2ff")
+theme_override_fonts/font = ExtResource("2_plp6h")
 theme_override_font_sizes/font_size = 100
-theme_override_styles/normal = SubResource("StyleBoxFlat_b7t8k")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_w66fs")
-theme_override_styles/hover = SubResource("StyleBoxFlat_n7n05")
-theme_override_styles/disabled = SubResource("StyleBoxFlat_q74px")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_2hjt7")
-disabled = true
+theme_override_styles/normal = SubResource("StyleBoxFlat_ph4g5")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_plp6h")
+theme_override_styles/hover = SubResource("StyleBoxFlat_cdpft")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_3pkme")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_oiadk")
 text = "X"
 
 [node name="Oswitch" type="Button" parent="HBoxContainer"]
@@ -1042,13 +1039,14 @@ size_flags_vertical = 3
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 32
-theme_override_fonts/font = ExtResource("2_jl2ff")
+theme_override_fonts/font = ExtResource("2_plp6h")
 theme_override_font_sizes/font_size = 100
-theme_override_styles/normal = SubResource("StyleBoxFlat_b7t8k")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_w66fs")
-theme_override_styles/hover = SubResource("StyleBoxFlat_n7n05")
-theme_override_styles/disabled = SubResource("StyleBoxFlat_q74px")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_2hjt7")
+theme_override_styles/normal = SubResource("StyleBoxFlat_ph4g5")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_plp6h")
+theme_override_styles/hover = SubResource("StyleBoxFlat_cdpft")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_3pkme")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_oiadk")
+disabled = true
 text = "O"
 
-[connection signal="pressed" from="HBoxContainer/Oswitch" to="." method="_on_oswitch_pressed"]
+[connection signal="pressed" from="HBoxContainer/Xswitch" to="." method="_on_xswitch_pressed"]

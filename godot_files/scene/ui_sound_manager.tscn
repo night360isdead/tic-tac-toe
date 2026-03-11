@@ -1,0 +1,27 @@
+[gd_scene load_steps=7 format=3 uid="uid://c0nfnyju2tf2m"]
+
+[ext_resource type="Script" uid="uid://bq0p3ep54etl6" path="res://scripts/ui_sound_manager.gd" id="1_b3eik"]
+[ext_resource type="AudioStream" uid="uid://4bol5je07h7i" path="res://assets/sfx/UI_hover.mp3" id="1_bk60q"]
+[ext_resource type="AudioStream" uid="uid://dvxj7is7j4xmo" path="res://assets/sfx/arcade-game-music-loop.mp3" id="3_834mh"]
+[ext_resource type="AudioStream" uid="uid://dwvcqw7fuiq8o" path="res://assets/sfx/tennis-ball-hit-sound-effect.mp3" id="4_mausw"]
+[ext_resource type="AudioStream" uid="uid://dnejhgwby8qto" path="res://assets/sfx/UI_select.mp3" id="5_fri1r"]
+[ext_resource type="AudioStream" uid="uid://bsqqlkr3tvgwa" path="res://assets/sfx/mixkit-falling-game-over-1942.wav" id="6_w1qau"]
+
+[node name="UI sound manager" type="Node"]
+script = ExtResource("1_b3eik")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("1_bk60q")
+
+[node name="music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_834mh")
+autoplay = true
+
+[node name="AudioStreamPlayer3" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_mausw")
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_fri1r")
+
+[node name="game_over" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_w1qau")
